@@ -603,7 +603,7 @@ def create_ui(wrap_gradio_gpu_call):
             )
 
             txt2img_prompt.submit(**txt2img_args)
-            submit.click(**txt2img_args)
+            submit.click(**txt2img_args, api_name="txt2img")
 
             enable_hr.change(
                 fn=lambda x: gr_show(x),
@@ -817,7 +817,7 @@ def create_ui(wrap_gradio_gpu_call):
             )
 
             img2img_prompt.submit(**img2img_args)
-            submit.click(**img2img_args, api_name="submit")
+            submit.click(**img2img_args, api_name="img2img")
 
             img2img_interrogate.click(
                 fn=interrogate,
