@@ -446,7 +446,7 @@ def create_toprow(is_img2img):
             with gr.Row():
                 skip = gr.Button('Skip', elem_id=f"{id_part}_skip")
                 interrupt = gr.Button('Interrupt', elem_id=f"{id_part}_interrupt")
-                submit = gr.Button('Generate', elem_id=f"{id_part}_generate", variant='primary')
+                submit = gr.Button('Generate', elem_id=f"{id_part}_generate", variant='primary', api_name="generate")
 
                 skip.click(
                     fn=lambda: shared.state.skip(),
